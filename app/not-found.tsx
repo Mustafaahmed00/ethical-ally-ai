@@ -6,7 +6,7 @@ export default function NotFound() {
             <div className="bg-white/80 backdrop-blur-sm rounded-lg shadow-lg p-8 max-w-md w-full text-center">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Page Not Found</h2>
                 <p className="text-gray-600 mb-6">
-                    Sorry, the page you're looking for doesn't exist or has been moved.
+                    Sorry, the page you&apos;re looking for doesn&apos;t exist or has been moved.
                 </p>
                 <div className="flex justify-center gap-4">
                     <Link

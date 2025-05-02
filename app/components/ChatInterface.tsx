@@ -100,7 +100,7 @@ export default function ChatInterface() {
                                             ${data.followUpQuestions.map((question: string, index: number) =>
                                         `<li class="question-item">
                                             <button class="question-button" data-question="${encodeURIComponent(question)}" data-question-id="${index}">
-                                                ${question}
+                                                ${question.replace(/'/g, "&apos;")}
                                             </button>
                                         </li>`
                                     ).join('')}
@@ -276,7 +276,7 @@ export default function ChatInterface() {
                 body: JSON.stringify({
                     message: input,
                     context: {
-                        domain: domain as any
+                        domain: domain as 'HEALTHCARE' | 'EMERGENCY' | 'EDUCATION' | 'GENERAL' | null
                     }
                 }),
             });
@@ -322,7 +322,7 @@ export default function ChatInterface() {
                             ${data.followUpQuestions.map((question: string, index: number) =>
                         `<li class="question-item">
                             <button class="question-button" data-question="${encodeURIComponent(question)}" data-question-id="${index}">
-                                ${question}
+                                ${question.replace(/'/g, "&apos;")}
                             </button>
                         </li>`
                     ).join('')}

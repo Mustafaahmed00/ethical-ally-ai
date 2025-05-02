@@ -45,7 +45,7 @@ function getRelevantFrameworks(message: string, domain: string): string[] {
             "empathy": ["CARE_ETHICS"],
         };
 
-        let relevantFrameworks = new Set<string>();
+        const relevantFrameworks = new Set<string>();
 
         // Add domain-specific default frameworks
         if (domain.toUpperCase() === "HEALTHCARE") {
