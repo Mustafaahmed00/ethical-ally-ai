@@ -1,24 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ethical Ally
+
+An AI companion that helps users navigate confusing ethical dilemmas by walking through different ethical frameworks, showing perspectives they might be missing, and guiding them to make better decisions that align with their values - all without telling them what to do.
+
+## Key Features
+
+- **Framework-Based Guidance**: Explore ethical dilemmas through multiple frameworks (utilitarian, deontological, virtue ethics, etc.)
+- **Domain-Specific Scenarios**: Pre-built ethical scenarios for healthcare, emergency services, education, and general situations
+- **No Prescriptive Advice**: The AI presents perspectives rather than telling users what to do
+- **Simple Interface**: Easy-to-use chat interface focused on ethical exploration
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+ and npm
+
+### Installation
+
+1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/ethical-ally.git
+cd ethical-ally
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Create a `.env` file in the root directory with your API key:
+```
+GEMINI_API_KEY=your-gemini-api-key-here
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To get a Gemini API key (free):
+- Go to https://aistudio.google.com/app/apikey
+- Sign in with your Google account
+- Click "Create API Key" and copy the key
+- Paste it in your `.env` file
+
+The application uses Google's **Gemini Flash 2** model, which is completely free to use with no usage limits.
+
+4. Start the development server
+```bash
+npm run dev
+```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Usage
+
+1. **Browse Scenarios**: Explore pre-built ethical dilemmas in healthcare, emergency services, education, and general domains
+2. **Select a Prompt**: Choose from domain-specific ethical questions or dilemmas
+3. **Chat with the AI**: Discuss your ethical situation and receive guidance based on different ethical frameworks
+4. **Explore Perspectives**: Consider different viewpoints without being told what to do
+
+## Tech Stack
+
+- Next.js 14 with App Router
+- TypeScript
+- Tailwind CSS
+- Google Gemini Flash 2 AI API (free, no usage limits)
 
 ## Learn More
 
